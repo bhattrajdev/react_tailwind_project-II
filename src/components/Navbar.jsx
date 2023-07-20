@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineSearch,
+  AiOutlineClose,
+  AiFillPlayCircle,
+} from "react-icons/ai";
 import { FaBarsStaggered } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -10,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center bg-gradient-to-r from-indigo-700  to-blue-700 content-center h-15 px-[40px]">
       {/* for logo */}
-      <div className="text-[30px] font-[600] uppercase">Navbar</div>
+      <div className="py-4"><AiFillPlayCircle className="text-white text-[30px]"/></div>
       {/* nav items */}
       <ul className="hidden gap-10 lg:flex font-[500]">
         <li className="text-[18px] cursor-pointer  hover:text-white text-white">
@@ -38,7 +42,7 @@ const Navbar = () => {
         </button>
       </form>
       {/* responsive */}
-      <div onClick={handleNav} className="block md:hidden">
+      <div onClick={handleNav} className="block lg:hidden">
         {nav ? (
           <div className="text-[20px] py-3  flex justify-end cursor-pointer">
             <AiOutlineClose />
@@ -50,7 +54,7 @@ const Navbar = () => {
         )}
       </div>
       {nav && (
-        <div className=" fixed w-80 right-0 pt-4  top-11 h-full bg-gradient-to-l from-indigo-700  to-blue-700 ">
+        <div className="lg:hidden z-[1] fixed w-80 right-0 pt-4  top-11 h-full bg-gradient-to-l from-indigo-700  to-blue-700 ">
           <form action="" className="flex  ">
             <input
               type="search"
