@@ -14,13 +14,16 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center bg-gradient-to-r from-indigo-700  to-blue-700 content-center h-15 px-[40px]">
       {/* for logo */}
-      <div className="py-4"><AiFillPlayCircle className="text-white text-[30px]"/></div>
+      <div className="py-4 flex items-center ">
+        <AiFillPlayCircle className="text-white text-[30px]" />
+        <span className="text-[20px] text-white pl-2">MOVIES</span>
+      </div>
       {/* nav items */}
       <ul className="hidden gap-10 lg:flex font-[500]">
         <li className="text-[18px] cursor-pointer  hover:text-white text-white">
           Home
         </li>
-        <li className="text-[18px] cursor-pointer hover:text-white">About</li>
+        <li className="text-[18px] cursor-pointer hover:text-white">Trending</li>
         <li className="text-[18px] cursor-pointer hover:text-white">Contact</li>
         <li className="text-[18px] cursor-pointer hover:text-white">
           Services
@@ -54,7 +57,7 @@ const Navbar = () => {
         )}
       </div>
       {nav && (
-        <div className="lg:hidden z-[1] fixed w-80 right-0 pt-4  top-11 h-full bg-gradient-to-l from-indigo-700  to-blue-700 ">
+        <div className="lg:hidden z-[1] fixed w-80 right-0 pt-4  top-12 h-full bg-gradient-to-l from-indigo-700  to-blue-700 ">
           <form action="" className="flex  ">
             <input
               type="search"

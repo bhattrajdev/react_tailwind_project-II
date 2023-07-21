@@ -1,15 +1,15 @@
-import './App.css'
-import Hero from './components/Hero';
-import Navbar from './components/Navbar'
+import "./App.css";
+import Home from "./pages/Home";
+import { Navbar,Footer } from "./components";
 
 function App() {
-
   return (
-    <div>
+    <>
       <Navbar />
-      <Hero/>
-    </div>
+      <Home />
+      <Footer/>
+    </>
   );
 }
 
-export default App
+export default App;
